@@ -4,7 +4,7 @@
 
 static SDL_Surface *font_surface;
 
-static SFont_FontInfo font;
+//static SFont_FontInfo font;
 
 #define putstring(X,Y,Str) (SFont_PutStringInfo(screen,&font,X,Y,Str))
 
