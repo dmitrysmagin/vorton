@@ -1,0 +1,144 @@
+FXE_TEXT =	"VORTON BETA-2"
+FXE_COMP =	"HIGHWAY DEVS"
+FXE_ICON =	src/gp32/icon.bmp
+
+
+ARM_COMP = 	arm-thumb-elf
+
+
+CC =		$(ARM_COMP)-gcc
+AS = 		$(ARM_COMP)-as
+LD = 		$(ARM_COMP)-gcc
+OBJCOPY = 	$(ARM_COMP)-objcopy
+B2FXEC =	b2fxec
+GPLINK =	gplink
+
+
+EXEC_NAME =	vorton
+
+
+DEPENDFILE =	Makedepend
+MAPFILE	=	$(EXEC_NAME).map
+TARGET_ELF =	$(EXEC_NAME).elf
+TARGET_BIN =	$(EXEC_NAME).gxb
+TARGET_FXE =	$(EXEC_NAME).fxe
+LDSCRIPT =	src/gp32/lnkscript
+USER_INIT =	src/gp32/user_init.o
+
+
+.SFILES	=	src/gp32/crt0.s \
+
+
+.CFILES	=	src/gp32/gpstart.c \
+		src/vorton.c \
+		src/video.c \
+		src/intro.c \
+		src/audio.c \
+		src/menu.c \
+		src/exit.c \
+		src/language.c \
+		src/records.c \
+		src/error.c \
+		src/rand.c \
+		src/filmat/laser.c \
+		src/filmat/process.c \
+		src/filmat/hero.c \
+		src/filmat/bloq.c \
+		src/filmat/brick.c \
+		src/filmat/fire.c \
+		src/filmat/robot.c \
+		src/filmat/movable.c \
+		src/filmat/parse.c \
+		src/filmat/pyramid.c \
+		src/filmat/dummy.c \
+		src/filmat/filmat.c \
+		src/filmat/video.c \
+		src/phase2/video.c \
+		src/phase2/process.c \
+		src/phase2/mode7.c \
+		src/phase2/stretch.c \
+		src/SDL_flic/SDL_flic.c \
+		src/SDL_flic/SDL_playflic.c \
+		src/SDL_flic/node_text.c \
+		src/SDL_flic/font-arial-12.c \
+		src/SFont/SFont.c \
+		src/ML_Lib/ML_Attribute.c \
+		src/ML_Lib/ML_Comment.c \
+		src/ML_Lib/ML_common_func.c \
+		src/ML_Lib/ML_COM_Sim.c \
+		src/ML_Lib/ML_Document.c \
+		src/ML_Lib/ML_Element.c \
+		src/ML_Lib/ML_leng_process.c \
+		src/ML_Lib/ML_Node.c \
+		src/ML_Lib/ML_Process.c \
+		src/ML_Lib/ML_Text.c \
+		
+
+.OFILES	=	$(.SFILES:.s=.o) $(.CFILES:.c=.o)
+
+
+OPTFLAGS =	-mtune=arm920 -march=armv4t -marm -mno-thumb-interwork \
+		-msoft-float -ffast-math -nostdlib -fno-common \
+		-ffreestanding -fno-builtin -fno-exceptions \
+		-mstructure-size-boundary=8 -fomit-frame-pointer \
+		-fstrict-aliasing -O6 \
+
+
+CFLAGS	=	-Isrc/gp32/include -Isrc -Isrc/SDL_flic -Isrc/filmat \
+		-I/usr/$(ARM_COMP)/include/SDL -Isrc/SFont \
+		$(OPTFLAGS) -DGFXST -DGP32 -Isrc/ML_Lib \
+		-DFILE_SEPARATOR=\"\\\\\" \
+		-DDATA_PREFIX=\"gp:\\\\gpmm\\\\vorton\\\\\" \
+		-Wall -Wno-switch -DUSE_FIXED_POINT -Isrc/phase2 \
+
+
+LDFLAGS	=	-T$(LDSCRIPT) $(USER_INIT) -nostartfiles \
+		-lgpos -lgpsound -lgpmem -lgpgraphic -lgpfont \
+		-lSDL_image -lSDL_flic -lSDL_mixer -lSDL \
+		-lpng -ljpeg -lz -lm -lgpstdlib -lgpstdio -Wno-thumb \
+
+
+
+
+$(TARGET_FXE):	$(TARGET_BIN)
+	$(B2FXEC) -t $(FXE_TEXT) -a $(FXE_COMP) -b $(FXE_ICON) $< $@
+
+
+$(TARGET_BIN): $(TARGET_ELF)
+	$(OBJCOPY) -O binary $< $@
+
+
+$(TARGET_ELF): $(.OFILES) $(DEPENDFILE)
+	$(LD) -o $@ $(.OFILES) $(LDFLAGS)
+
+
+.PHONY: all clean depend
+
+
+all:    clean depend $(TARGET_BIN)
+
+
+tags:	$(DEPENDFILE)
+	ctags -e *.c *.s *.h *.S
+
+
+clean:
+	-rm -f $(.OFILES) $(DEPENDFILE) $(MAPFILE) $(TARGET_ELF) $(TARGET_BIN) $(TARGET_FXE) TAGS
+
+
+send: $(TARGET_FXE)
+	$(GPLINK) -x put $(TARGET_FXE) /GPMM
+
+
+run: $(TARGET_BIN)
+	$(GPLINK) run $(TARGET_BIN)
+
+depend:
+	$(CC) $(CFLAGS) -M $(.CFILES) > $(DEPENDFILE)
+
+
+$(DEPENDFILE):
+	$(CC) $(CFLAGS) -M $(.CFILES) > $(DEPENDFILE)
+
+
+include $(DEPENDFILE)

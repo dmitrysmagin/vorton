@@ -1,0 +1,77 @@
+TARGET=vorton
+
+KOS_CFLAGS+= -DDREAMCAST=YES -DDATA_PREFIX=\"/rd/\" -DFILE_SEPARATOR=\"/\" -DSOUND -DMUSIC -DJOY_YES -DDIVISOR=1 -Isrc -Isrc/SDL_flic -I/opt/dc/kos/kos-ports/include/SDL -Isrc/SFont -Isrc/filmat -Wno-switch -Isrc/phase2 -Isrc/ML_Lib
+
+all: $(TARGET).elf romdisk.o
+
+include $(KOS_BASE)/Makefile.rules
+
+.CFILES	=	src/vorton.c \
+		src/video.c \
+		src/intro.c \
+		src/audio.c \
+		src/menu.c \
+		src/exit.c \
+		src/language.c \
+		src/records.c \
+		src/error.c \
+		src/rand.c \
+		src/filmat/laser.c \
+		src/filmat/process.c \
+		src/filmat/hero.c \
+		src/filmat/bloq.c \
+		src/filmat/brick.c \
+		src/filmat/fire.c \
+		src/filmat/robot.c \
+		src/filmat/movable.c \
+		src/filmat/parse.c \
+		src/filmat/pyramid.c \
+		src/filmat/dummy.c \
+		src/filmat/filmat.c \
+		src/filmat/video.c \
+		src/phase2/video.c \
+		src/phase2/process.c \
+		src/phase2/mode7.c \
+		src/phase2/stretch.c \
+		src/SDL_flic/SDL_flic.c \
+		src/SDL_flic/SDL_playflic.c \
+		src/SDL_flic/node_text.c \
+		src/SDL_flic/font-arial-12.c \
+		src/SFont/SFont.c \
+		src/ML_Lib/ML_Attribute.c \
+		src/ML_Lib/ML_Comment.c \
+		src/ML_Lib/ML_common_func.c \
+		src/ML_Lib/ML_COM_Sim.c \
+		src/ML_Lib/ML_Document.c \
+		src/ML_Lib/ML_Element.c \
+		src/ML_Lib/ML_leng_process.c \
+		src/ML_Lib/ML_Node.c \
+		src/ML_Lib/ML_Process.c \
+		src/ML_Lib/ML_Text.c \
+
+
+OBJS =		$(.CFILES:.c=.o)
+
+
+
+$(TARGET).elf: $(OBJS) romdisk.o
+	$(KOS_CC) $(KOS_CFLAGS) $(KOS_LOCAL_CFLAGS) $(KOS_LDFLAGS) -o $@ $(KOS_START) $(OBJS) romdisk.o $(KOS_LIBS) -lSDL_mixer -lSDL -lm -lSDL_image -lpng -lz -lm $(KOS_LIBS) -lSDL
+	$(KOS_STRIP) $(TARGET).elf
+
+romdisk.o: romdisk.img
+#	$(KOS_BASE)/utils/bin2o/bin2o romdisk.img romdisk romdisk.o
+	bin2odc romdisk.img romdisk.o
+
+romdisk.img:
+	$(KOS_GENROMFS) -f romdisk.img -d data -v
+
+run: $(TARGET).elf
+	$(KOS_LOADER) $(TARGET).elf 
+	sleep 5
+	$(KOS_LOADER_RESET)
+
+clean:
+	rm -f $(OBJS)
+	rm -f output.bin
+	rm -f $(TARGET).elf
+	rm -f romdisk.*

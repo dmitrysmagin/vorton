@@ -1,0 +1,97 @@
+TARGET	=	vorton.exe
+
+
+CC =		gcc
+STRIP=		strip
+
+
+SDL_CFLAGS =	-I/usr/local/include/SDL -Dmain=SDL_main -I/usr/include/mingw -DWIN32 -Uunix -mno-cygwin
+
+SDL_LDFLAGS =	-L/usr/local/lib -lmingw32 -lSDLmain -lSDL -mwindows -mno-cygwin -luser32 -lgdi32 -lwinmm
+
+
+#SDL_CFLAGS =	`sdl-config --cflags`
+#SDL_LDFLAGS =	`sdl-config --libs`
+
+
+CFLAGS =	-Wall -Wno-switch -march=pentium -mcpu=pentium -DDEBUG \
+		-DDATA_PREFIX=\"data/\" -DFILE_SEPARATOR=\"/\" -DWINDOWS \
+		-Isrc -Isrc/SDL_flic -Isrc/SFont ${SDL_CFLAGS} -DARGS \
+		-ffast-math -fno-common -ffreestanding -fno-builtin \
+		-fno-exceptions -fstrict-aliasing -O3 -I/usr/local/include \
+		-Isrc/ML_Lib -Isrc/phase2 \
+
+
+LDFLAGS =	-L/usr/lib ${SDL_LDFLAGS} -lSDL_image -lSDL_mixer \
+		-lpng -lz -ljpeg \
+
+
+
+.CFILES	=	src/vorton.c \
+		src/video.c \
+		src/intro.c \
+		src/audio.c \
+		src/menu.c \
+		src/exit.c \
+		src/language.c \
+		src/records.c \
+		src/error.c \
+		src/rand.c \
+		src/filmat/laser.c \
+		src/filmat/process.c \
+		src/filmat/hero.c \
+		src/filmat/bloq.c \
+		src/filmat/brick.c \
+		src/filmat/fire.c \
+		src/filmat/robot.c \
+		src/filmat/movable.c \
+		src/filmat/parse.c \
+		src/filmat/pyramid.c \
+		src/filmat/dummy.c \
+		src/filmat/filmat.c \
+		src/filmat/video.c \
+		src/phase2/video.c \
+		src/phase2/process.c \
+		src/phase2/mode7.c \
+		src/phase2/stretch.c \
+		src/SDL_flic/SDL_flic.c \
+		src/SDL_flic/SDL_playflic.c \
+		src/SDL_flic/node_text.c \
+		src/SDL_flic/font-arial-12.c \
+		src/SFont/SFont.c \
+		src/ML_Lib/ML_Attribute.c \
+		src/ML_Lib/ML_Comment.c \
+		src/ML_Lib/ML_common_func.c \
+		src/ML_Lib/ML_COM_Sim.c \
+		src/ML_Lib/ML_Document.c \
+		src/ML_Lib/ML_Element.c \
+		src/ML_Lib/ML_leng_process.c \
+		src/ML_Lib/ML_Node.c \
+		src/ML_Lib/ML_Process.c \
+		src/ML_Lib/ML_Text.c \
+
+
+all: $(TARGET)
+
+
+
+OBJS =		$(.CFILES:.c=.o)
+
+
+$(TARGET):	$(OBJS)
+	$(CC) $(CFLAGS) -o $@ $(OBJS) $(LDFLAGS)
+	$(STRIP) $(TARGET)
+
+
+static:	$(OBJS)
+	$(CC) -L/usr/local/lib -o $(TARGET) -lmingw32 $(OBJS) -lSDL_static -mwindows -mno-cygwin -luser32 -lgdi32 -lwinmm
+	$(STRIP) $(TARGET)
+
+
+run:		$(TARGET)
+	./$(TARGET)
+
+
+clean:
+	rm -f $(OBJS) $(TARGET)
+

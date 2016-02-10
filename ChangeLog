@@ -1,0 +1,43 @@
+
+- Beta 2
+	Phase2 included: mode7 stages (Continue Game Hardcore).
+	XML parser improved with ML_Lib.
+	Dreamcast release.
+	Fonts changes.
+
+- Beta 1
+	Display Error System
+	Dreamcast !
+	Added more musics
+	Bugs fixed.
+	Level 1 complete (need tester)
+
+
+- Alpha 3
+	Speech synthesis samples
+	More video effects
+	Hero dead
+	Added more sound effects
+	Pause screen
+	Game over screen
+	Language menu option (only screen)
+	Top records menu option (only screen)
+	Command arguments (audio/video options)
+	
+
+- Alpha 2
+	Added SFont and SDL_flic.
+	New Menu design.
+	Anim Sprites.
+	Parse and load diferents maps.
+	Added Credits on the end of application.
+	New start game with ship arriving.
+	A lot of bugs fixed.
+
+
+- Alpha 1
+	First version.
+	Scroll and Sprites works.
+	Simple Menu.
+	A bit playable.
+	
