@@ -1,0 +1,9 @@
+10 Los aliens nos invaden
+20 Solo hay una opción:
+30 Los robots VORTON.
+40 Conducelos a través
+50 de la autopista hacia
+60 su base para poner
+70 una bomba nuclear
+73 
+1000 ¡ADELANTE!

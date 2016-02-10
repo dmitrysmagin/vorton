@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<?vortonMap version="1.0"?>
+<map level="1">
+
+<!-- 1 -->
+<obj x="0" y="64" type="DUSTBIN"/>
+<obj x="11" y="72" type="DUSTBIN"/>
+<obj x="28" y="84" type="DUSTBIN"/>
+<obj x="36" y="84" type="DUSTBIN"/>
+<obj x="55" y="64" type="DUSTBIN"/>
+<obj x="64" y="72" type="DUSTBIN"/>
+
+<!-- 2 -->
+<obj x="0" y="192" type="BRICK"/>
+<obj x="8" y="192" type="BRICK"/>
+<obj x="16" y="192" type="FIRE"/>
+<obj x="64" y="224" type="FIRE"/>
+<obj x="18" y="224" vel="1" move="3" type="CYCLOP"/>
+<obj x="28" y="224" vel="2" move="3 type="CYCLOP"/>
+<obj x="38" y="224" vel="3" move="3" type="CYCLOP"/>
+
+<!-- 3 -->
+<obj x="20" y="320" type="BLOQ"/>
+<obj x="44" y="326" type="BLOQ"/>
+<obj x="12" y="352" type="FIRE"/>
+<obj x="52" y="352" type="FIRE"/>
+
+<!-- 4 -->
+<obj x="20" y="426" type="BRICK"/>
+<obj x="0" y="430" move="1" type="MINE"/>
+<obj x="32" y="468" type="BRICK"/>
+<obj x="40" y="470" move="5" vel="4" type="MINE"/>
+<obj x="20" y="484" type="DUSTBIN"/>
+<obj x="10" y="499" type="DUSTBIN"/>
+
+<!-- 5 -->
+<obj x="18" y="516" vel="4" move="9" type="ROBOT"/>
+<obj x="28" y="516" vel="4" move="9" type="ROBOT"/>
+<obj x="64" y="536" type="BRICK"/>
+<obj x="58" y="536" type="BRICK"/>
+<obj x="10" y="576" type="DUSTBIN"/>
+<obj x="0" y="626" type="BRICK"/>
+<obj x="8" y="626" type="BRICK"/>
+
+<!-- 6 -->
+<obj x="56" y="640" type="TILE"/>
+<obj x="0" y="648" type="TILE"/>
+<obj x="48" y="656" type="TILE"/>
+<obj x="16" y="664" type="TILE"/>
+<obj x="56" y="672" type="TILE"/>
+<obj x="0" y="688" type="TILE"/>
+<obj x="64" y="696" type="TILE"/>
+<obj x="8" y="712" type="TILE"/>
+<obj x="64" y="728" type="TILE"/>
+<obj x="0" y="736" type="TILE"/>
+<obj x="48" y="752" type="TILE"/>
+<obj x="16" y="760" type="TILE"/>
+<obj x="18" y="748" vel="1" move="3" type="CYCLOP"/>
+<obj x="28" y="748" vel="2" move="3" type="CYCLOP"/>
+<obj x="38" y="748" vel="3" move="3" type="CYCLOP"/>
+<obj x="48" y="748" vel="5" move="3" type="CYCLOP"/>
+
+<!-- 7 -->
+<obj x="32" y="852" move="5" vel="4" type="MINE"/>
+<obj x="40" y="852" type="BRICK"/>
+<obj x="24" y="852" type="BRICK"/>
+<obj x="32" y="860" type="DUSTBIN"/>
+<obj x="10" y="884" vel="4" move="5" type="ROBOT"/>
+<obj x="64" y="856" vel="4" move="5" type="ROBOT"/>
+<obj x="64" y="868" vel="4" move="5" type="CYCLOP"/>
+
+<!-- 8 -->
+<obj x="24" y="920" type="FIRE"/>
+<obj x="0" y="992" type="FIRE"/>
+<obj x="56" y="944" type="FIRE"/>
+<obj x="56" y="920" vel="4" move="5" type="ROBOT"/>
+<obj x="8" y="976" vel="3" move="9" type="ROBOT"/>
+<obj x="40" y="932" vel="2" move="10" type="ROBOT"/>
+
+<!-- 9 -->
+<obj x="36" y="1092" type="DUSTBIN"/>
+<obj x="32" y="1076" type="DUSTBIN"/>
+<obj x="44" y="1092" type="DUSTBIN"/>
+<obj x="16" y="1100" type="DUSTBIN"/>
+<obj x="48" y="1152" type="TILE"/>
+<obj x="48" y="1144" type="TILE"/>
+<obj x="48" y="1136" type="FIRE"/>
+<obj x="56" y="1136" type="TILE"/>
+<obj x="64" y="1136" type="TILE"/>
+<obj x="16" y="1136" type="FIRE"/>
+<obj x="8" y="1136" type="TILE"/>
+<obj x="0" y="1136" type="TILE"/>
+<obj x="16" y="1152" type="TILE"/>
+<obj x="16" y="1144" type="TILE"/>
+
+<!-- 10 -->
+<obj x="56" y="1216" vel="5" move="3" type="MOUTH"/>
+<obj x="40" y="1232" vel="3" move="5" type="MOUTH"/>
+<obj x="24" y="1264" vel="4" move="3" type="MOUTH"/>
+<obj x="8" y="1280" vel="2" move="4" type="MOUTH"/>
+<obj x="56" y="1280" vel="3" move="3" type="MOUTH"/>
+
+<!-- 11 -->
+<obj x="56" y="1312" vel="5" move="3" type="MOUTH"/>
+<obj x="56" y="1336" vel="3" move="5" type="MOUTH"/>
+<obj x="24" y="1352" vel="4" move="3" type="MOUTH"/>
+<obj x="8" y="1368" vel="2" move="4" type="MOUTH"/>
+<obj x="56" y="1368" vel="4" move="3" type="MOUTH"/>
+<obj x="64" y="1392" vel="2" move="3" type="MOUTH"/>
+<obj x="32" y="1400" type="BRICK"/>
+<obj x="32" y="1408" type="BRICK"/>
+<obj x="24" y="1408" type="FIRE"/>
+<obj x="40" y="1408" type="FIRE"/>
+
+<!-- 12 -->
+<obj x="48" y="1456" type="DUSTBIN"/>
+<obj x="24" y="1496" type="DUSTBIN"/>
+<obj x="16" y="1480" move="5" vel="4" type="MINE"/>
+<obj x="48" y="1480" move="5" vel="4" type="MINE"/>
+
+<!-- 13 -->
+<obj x="24" y="1568" type="BRICK"/>
+<obj x="48" y="1632" type="BRICK"/>
+<obj x="56" y="1640" type="BRICK"/>
+<obj x="24" y="1584" move="5" vel="4" type="MINE"/>
+<obj x="16" y="1600" move="5" vel="4" type="MINE"/>
+<obj x="36" y="1616" move="1" vel="4" type="MINE"/>
+
+<!-- 14 -->
+<obj x="32" y="1744" type="BRICK"/>
+<obj x="24" y="1752" type="BRICK"/>
+<obj x="32" y="1752" type="BRICK"/>
+<obj x="40" y="1752" type="BRICK"/>
+<obj x="32" y="1760" type="BRICK"/>
+
+<!-- 15 -->
+<obj x="0" y="1816" type="TILE"/>
+<obj x="64" y="1816" type="TILE"/>
+<obj x="8" y="1824" type="TILE"/>
+<obj x="56" y="1824" type="TILE"/>
+<obj x="24" y="1832" type="FIRE"/>
+<obj x="40" y="1832" type="FIRE"/>
+
+<!-- 16 -->
+<obj x="24" y="1928" type="BLOQ"/>
+<obj x="56" y="1936" type="BLOQ"/>
+<obj x="64" y="1976" type="BLOQ"/>
+<obj x="0" y="1992" type="BLOQ"/>
+<obj x="24" y="2024" type="BLOQ"/>
+<obj x="48" y="2024" type="BLOQ"/>
+<obj x="8" y="1968" move="8" vel="6" type="DISC"/>
+<obj x="32" y="1976" move="8" vel="5" type="DISC"/>
+<obj x="56" y="2000" move="8" vel="6" type="DISC"/>
+<obj x="8" y="2040" move="8" vel="7" type="DISC"/>
+<obj x="56" y="2040" move="8" vel="5" type="DISC"/>
+
+<!-- 17 -->
+<obj x="0" y="2096" move="8" vel="2" type="DISC"/>
+<obj x="56" y="2056" move="8" vel="3" type="DISC"/>
+<obj x="8" y="2072" type="TILE"/>
+<obj x="56" y="2080" type="TILE"/>
+<obj x="64" y="2088" type="TILE"/>
+<obj x="16" y="2104" type="TILE"/>
+<obj x="48" y="2120" type="TILE"/>
+<obj x="24" y="2128" type="TILE"/>
+<obj x="56" y="2152" type="TILE"/>
+<obj x="0" y="2160" type="TILE"/>
+<obj x="56" y="2072" type="DUSTBIN"/>
+<obj x="48" y="2136" type="DUSTBIN"/>
+<obj x="48" y="2144" type="DUSTBIN"/>
+
+<!-- 18 -->
+<obj x="0" y="2200" move="8" vel="5" type="DISC"/>
+<obj x="16" y="2240" move="5" vel="5" type="MINE"/>
+<obj x="48" y="2240" move="1" vel="5" type="MINE"/>
+<obj x="8" y="2248" move="5" vel="5" type="MINE"/>
+
+<!-- 19 -->
+<obj x="56" y="2352" type="BRICK"/>
+<obj x="64" y="2352" type="BRICK"/>
+<obj x="0" y="2392" type="BRICK"/>
+<obj x="8" y="2392" type="BRICK"/>
+<obj x="24" y="2368" vel="2" move="3" type="CYCLOP"/>
+<obj x="48" y="2368" vel="3" move="3" type="CYCLOP"/>
+<obj x="8" y="2424" vel="4" move="3" type="MOUTH"/>
+<obj x="40" y="2432" vel="5" move="9" type="ROBOT"/>
+
+<!-- 20 -->
+<obj x="56" y="2456" vel="4" move="3" type="MOUTH"/>
+<obj x="48" y="2480" vel="4" move="3" type="MOUTH"/>
+<obj x="56" y="2512" vel="5" move="9" type="ROBOT"/>
+<obj x="28" y="2520" type="BRICK"/>
+<obj x="20" y="2528" type="BRICK"/>
+<obj x="8" y="2536" type="BRICK"/>
+<obj x="36" y="2536" type="BRICK"/>
+<obj x="48" y="2536" type="BRICK"/>
+<obj x="56" y="2536" type="BRICK"/>
+
+<!-- 21 -->
+<obj x="20" y="2604" type="BRICK"/>
+<obj x="12" y="2624" type="BRICK"/>
+<obj x="12" y="2640" type="BRICK"/>
+
+<!-- 22 -->
+<obj x="32" y="2728" move="5" vel="5" type="MINE"/>
+<obj x="16" y="2744" move="1" vel="5" type="MINE"/>
+<obj x="32" y="2760" move="5" vel="5" type="MINE"/>
+<obj x="24" y="2768" move="1" vel="5" type="MINE"/>
+<obj x="56" y="2768" vel="5" move="3" type="MOUTH"/>
+<obj x="64" y="2808" vel="5" move="9" type="MOUTH"/>
+
+<!-- 23 -->
+<obj x="40" y="2824" vel="5" move="3" type="MOUTH"/>
+<obj x="0" y="2840" vel="6" move="9" type="MOUTH"/>
+<obj x="8" y="2856" vel="7" move="9" type="MOUTH"/>
+<obj x="32" y="2864" vel="5" move="10" type="MOUTH"/>
+<obj x="40" y="2936" vel="7" move="9" type="ROBOT"/>
+<obj x="28" y="2892" type="BRICK"/>
+<obj x="20" y="2900" type="BRICK"/>
+<obj x="44" y="2908" type="BRICK"/>
+<obj x="36" y="2916" type="BRICK"/>
+<obj x="28" y="2900" vel="2" move="3" type="CYCLOP"/>
+<obj x="36" y="2908" vel="3" move="3" type="CYCLOP"/>
+<obj x="36" y="2900" move="1" vel="5" type="MINE"/>
+<obj x="28" y="2908" move="5" vel="5" type="MINE"/>
+
+<!-- 24 -->
+<obj x="32" y="2856" vel="7" move="9" type="ROBOT"/>
+<obj x="8" y="2868" vel="5" move="10" type="MOUTH"/>
+<obj x="48" y="3016" vel="7" move="9" type="ROBOT"/>
+<obj x="16" y="3048" type="BRICK"/>
+<obj x="48" y="3048" type="BRICK"/>
+<obj x="8" y="3056" type="BRICK"/>
+<obj x="16" y="3056" type="BRICK"/>
+<obj x="48" y="3056" type="BRICK"/>
+<obj x="56" y="3056" type="BRICK"/>
+
+<!-- 25 -->
+<obj x="0" y="3072" type="FIRE"/>
+<obj x="64" y="3072" type="FIRE"/>
+<obj x="16" y="3096" type="BRICK"/>
+<obj x="48" y="3096" type="BRICK"/>
+<obj x="8" y="3088" type="BRICK"/>
+<obj x="16" y="3088" type="BRICK"/>
+<obj x="48" y="3088" type="BRICK"/>
+<obj x="56" y="3088" type="BRICK"/>
+<obj x="40" y="3112" vel="6" move="9" type="ROBOT"/>
+<obj x="40" y="3136" vel="6" move="9" type="ROBOT"/>
+<obj x="32" y="3168" move="5" vel="4" type="MINE"/>
+<obj x="8" y="3168" type="BLOQ"/>
+<obj x="56" y="3168" type="BLOQ"/>
+<obj x="0" y="3168" vel="7" move="10" type="CYCLOP"/>
+<obj x="0" y="3184" vel="5" move="9" type="CYCLOP"/>
+<obj x="0" y="3072" vel="7" move="3" type="CYCLOP"/>
+<obj x="64" y="3168" vel="5" move="9" type="CYCLOP"/>
+<obj x="64" y="3184" vel="8" move="11" type="CYCLOP"/>
+<obj x="64" y="3072" vel="3" move="9" type="CYCLOP"/>
+
+<!-- 26 -->
+<obj x="8" y="3280" type="BRICK"/>
+<obj x="24" y="3296" type="BRICK"/>
+<obj x="40" y="3296" type="BRICK"/>
+<obj x="56" y="3280" type="BRICK"/>
+<obj x="40" y="3224" move="8" vel="7" type="DISC"/>
+<obj x="8" y="3256" move="8" vel="6" type="DISC"/>
+<obj x="24" y="3312" move="8" vel="7" type="DISC"/>
+<obj x="40" y="3328" move="8" vel="8" type="DISC"/>
+
+<!-- 27 -->
+<obj x="32" y="3368" move="8" vel="6" type="DISC"/>
+<obj x="0" y="3392" move="8" vel="7" type="DISC"/>
+<obj x="64" y="3344" type="DUSTBIN"/>
+<obj x="8" y="3440" type="DUSTBIN"/>
+
+<!-- 28 -->
+<obj x="48" y="3480" move="5" vel="5" type="MINE"/>
+<obj x="16" y="3488" move="1" vel="5" type="MINE"/>
+<obj x="48" y="3512" move="5" vel="5" type="MINE"/>
+<obj x="24" y="3520" move="1" vel="5" type="MINE"/>
+<obj x="16" y="3528" move="5" vel="5" type="MINE"/>
+<obj x="64" y="3560" move="1" vel="5" type="MINE"/>
+
+<!-- 29 -->
+<obj x="16" y="3616" type="DUSTBIN"/>
+<obj x="16" y="3632" type="DUSTBIN"/>
+<obj x="32" y="3644" type="DUSTBIN"/>
+<obj x="32" y="3664" move="8" vel="7" type="DISC"/>
+<obj x="16" y="3680" move="8" vel="8" type="DISC"/>
+<obj x="64" y="3680" move="8" vel="9" type="DISC"/>
+<obj x="56" y="3696" move="8" vel="8" type="DISC"/>
+
+<!-- 30 -->
+<obj x="16" y="3728" move="8" vel="8" type="DISC"/>
+<obj x="48" y="3744" move="8" vel="9" type="DISC"/>
+<obj x="56" y="3760" move="8" vel="8" type="DISC"/>
+<obj x="24" y="3800" type="FIRE"/>
+<obj x="48" y="3800" type="FIRE"/>
+<obj x="8" y="3808" type="FIRE"/>
+<obj x="16" y="3808" type="FIRE"/>
+<obj x="48" y="3808" type="FIRE"/>
+<obj x="56" y="3808" type="FIRE"/>
+
+<!-- 31 -->
+<obj x="8" y="3832" vel="9" move="3" type="CYCLOP"/>
+<obj x="24" y="3832" vel="9" move="9" type="CYCLOP"/>
+<obj x="40" y="3832" vel="9" move="11" type="CYCLOP"/>
+<obj x="56" y="3832" vel="9" move="9" type="CYCLOP"/>
+
+<!-- 32 -->
+
+<!--- fila 1 -->
+<obj x="16" y="3840" vel="9" move="3" type="CYCLOP"/>
+<obj x="32" y="3840" vel="9" move="9" type="CYCLOP"/>
+<obj x="48" y="3840" vel="9" move="11" type="CYCLOP"/>
+<obj x="64" y="3840" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 2 -->
+<obj x="8" y="3848" vel="9" move="3" type="CYCLOP"/>
+<obj x="24" y="3848" vel="9" move="9" type="CYCLOP"/>
+<obj x="40" y="3848" vel="9" move="11" type="CYCLOP"/>
+<obj x="56" y="3848" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 3 -->
+<obj x="0" y="3856" vel="9" move="3" type="CYCLOP"/>
+<obj x="16" y="3856" vel="9" move="9" type="CYCLOP"/>
+<obj x="32" y="3856" vel="9" move="11" type="CYCLOP"/>
+<obj x="48" y="3856" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 4 -->
+<obj x="8" y="3862" vel="9" move="3" type="CYCLOP"/>
+<obj x="24" y="3862" vel="9" move="9" type="CYCLOP"/>
+<obj x="40" y="3862" vel="9" move="11" type="CYCLOP"/>
+<obj x="56" y="3862" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 5 -->
+<obj x="16" y="3840" vel="9" move="3" type="CYCLOP"/>
+<obj x="32" y="3870" vel="9" move="9" type="CYCLOP"/>
+<obj x="48" y="3870" vel="9" move="11" type="CYCLOP"/>
+<obj x="64" y="3870" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 6 -->
+<obj x="8" y="3878" vel="9" move="3" type="CYCLOP"/>
+<obj x="24" y="3878" vel="9" move="9" type="CYCLOP"/>
+<obj x="40" y="3878" vel="9" move="11" type="CYCLOP"/>
+<obj x="56" y="3878" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 7 -->
+<obj x="0" y="3886" vel="9" move="3" type="CYCLOP"/>
+<obj x="16" y="3886" vel="9" move="9" type="CYCLOP"/>
+<obj x="32" y="3886" vel="9" move="11" type="CYCLOP"/>
+<obj x="48" y="3886" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 8 -->
+<obj x="8" y="3892" vel="9" move="3" type="CYCLOP"/>
+<obj x="24" y="3892" vel="9" move="9" type="CYCLOP"/>
+<obj x="40" y="3892" vel="9" move="11" type="CYCLOP"/>
+<obj x="56" y="3892" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 9 -->
+<obj x="16" y="3900" vel="9" move="3" type="CYCLOP"/>
+<obj x="32" y="3900" vel="9" move="9" type="CYCLOP"/>
+<obj x="48" y="3900" vel="9" move="11" type="CYCLOP"/>
+<obj x="64" y="3900" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 10 -->
+<obj x="8" y="3908" vel="9" move="3" type="CYCLOP"/>
+<obj x="24" y="3908" vel="9" move="9" type="CYCLOP"/>
+<obj x="40" y="3908" vel="9" move="11" type="CYCLOP"/>
+<obj x="56" y="3908" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 11 -->
+<obj x="0" y="3916" vel="9" move="3" type="CYCLOP"/>
+<obj x="16" y="3916" vel="9" move="9" type="CYCLOP"/>
+<obj x="32" y="3916" vel="9" move="11" type="CYCLOP"/>
+<obj x="48" y="3916" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 12 -->
+<obj x="8" y="3922" vel="9" move="3" type="CYCLOP"/>
+<obj x="24" y="3922" vel="9" move="9" type="CYCLOP"/>
+<obj x="40" y="3922" vel="9" move="11" type="CYCLOP"/>
+<obj x="56" y="3922" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 13 -->
+<obj x="16" y="3930" vel="9" move="3" type="CYCLOP"/>
+<obj x="32" y="3930" vel="9" move="9" type="CYCLOP"/>
+<obj x="48" y="3930" vel="9" move="11" type="CYCLOP"/>
+<obj x="64" y="3930" vel="9" move="9" type="CYCLOP"/>
+
+<!--- fila 14 -->
+<obj x="8" y="3938" vel="9" move="3" type="CYCLOP"/>
+<obj x="24" y="3938" vel="9" move="9" type="CYCLOP"/>
+<obj x="40" y="3938" vel="9" move="11" type="CYCLOP"/>
+<obj x="56" y="3938" vel="9" move="9" type="CYCLOP"/>
+
+<!-- END OF LEVEL 1 -->
+
